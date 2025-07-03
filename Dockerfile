@@ -14,6 +14,6 @@ RUN npm run test
 #Expose the port number
 EXPOSE 8000
 
-#
+# run the app
 CMD ["node","app.js"]
 
