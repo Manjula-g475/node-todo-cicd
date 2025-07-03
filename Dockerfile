@@ -1,16 +1,19 @@
-# Node Base Image
+#base image
 FROM node:12.2.0-alpine
 
-#Working Directry
-WORKDIR /node
+#Working directory name
+WORKDIR app
 
-#Copy the Code
+#copy from source to destination
 COPY . .
 
-#Install the dependecies
+#run the app
 RUN npm install
 RUN npm run test
+
+#Expose the port number
 EXPOSE 8000
 
-#Run the code
+#
 CMD ["node","app.js"]
+
